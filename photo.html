@@ -13,14 +13,12 @@
     nightDayHandler(this);
   ">
   <h2 id="title"><a href="#!index1" onclick="fetchPage('index1')">환영합니다</a></h2>
-  <div id="grid">
     <ul id="nav">
       <li><a href="#!introduction" onclick="fetchPage('introduction')">소개</a></li>
       <li><a href="#!story" onclick="fetchPage('story')">글</a></li>
       <li><a href="photo.html">사진</a></li>
       <li><a href="#!IT" onclick="fetchPage('IT')">IT</a></li>
     </ul>
-    <div id="article">
       <article>
         <h2>2019.2.28 아내의 그림</h2>
         <p>아내가 4개월전부터</p>
@@ -35,8 +33,6 @@
         <img src="picture/sunghoonincar.jpg">
         <img src="picture/sunghoonsmile.jpg">
       </article>
-    </div>
-  </div>
   <script>
     function fetchPage(name){
       fetch(name).then(function(response) {
