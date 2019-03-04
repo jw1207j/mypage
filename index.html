@@ -8,20 +8,33 @@
   <script src="colors.js"></script>
 </head>
 <body>
-  <input type="button" value="night" onclick="
-    nightDayHandler(this);
-  ">
-  <h2 id="title"><a href="#!index1.html" onclick="fetchPage('index1.html')">환영합니다</a></h2>
+  <div id="headline">
+    <input type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+    <h1 id="title"><a href="#!index1" onclick="fetchPage('index1')">환영합니다</a></h1>
+  </div>
   <div id="grid">
     <ul id="nav">
-      <li><a href="#!introduction.html" onclick="fetchPage('introduction.html')">소개</a></li>
-      <li><a href="#!story.html" onclick="fetchPage('story.html')">글</a></li>
-      <li><a href="photo.html">사진</a></li>
-      <li><a href="#!IT.html" onclick="fetchPage('IT.html')">IT</a></li>
+      <li><a href="#!introduction" onclick="fetchPage('introduction')">소개</a></li>
+      <li><a href="#!story" onclick="fetchPage('story')">글</a></li>
+      <li><a href="index.html">사진</a></li>
+      <li><a href="#!IT" onclick="fetchPage('IT')">IT</a></li>
     </ul>
     <div id="article">
       <article>
-
+        <h2>2019.2.28 아내의 그림</h2>
+        <p>아내가 4개월전부터</p>
+        <p>교회에서 미술배우는 프로그램에 등록하여 그림배우고 있습니다.</p>
+        <img src="picture/sun.jpg">
+        <img src="picture/boat.jpg">
+        <img src="picture/flower.jpg">
+        <img src="picture/valley.jpg">
+        <img src="picture/vase.jpg">
+        <h2>2019.3.4 손자 성훈</h2>
+        <p>이제 9개월째되는 손자 정성훈입니다.</p>
+        <img src="picture/sunghoonincar.jpg">
+        <img src="picture/sunghoonsmile.jpg">
       </article>
     </div>
   </div>
@@ -35,8 +48,6 @@
     }
     if(location.hash){
       fetchPage(location.hash.substr(2));
-    } else {
-      fetchPage('index');
     }
   </script>
   <p>

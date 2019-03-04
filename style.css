@@ -2,6 +2,9 @@ a {
   color:blue;
   text-decoration:none;
 }
+#headline {
+  background-image:url("picture/back.jpg");
+}
 h1 {
   font-size:45px;
   text-align:center;
@@ -9,8 +12,8 @@ h1 {
   margin:0;
   padding:20px;
 }
-ol {
-  border-right:1px solid gray;
+#nav {
+
   width:70px;
   margin:0;
   padding:20px;
@@ -20,11 +23,12 @@ ol {
   display: grid;
   grid-template-columns: 140px 1fr;
 }
-#grid ol {
+#grid ul {
   padding-left:32px;
 }
 #grid #article {
-  padding-left:15px;
+  border-left:1px solid gray;
+  padding-left:30px;
 }
 @media only screen and (max-width:800px){
   #grid {
