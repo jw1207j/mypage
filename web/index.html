@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>web-Welcome</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+</head>
+<body>
+  <input type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+  <h2 id="title"><a href="#!index1.html" onclick="fetchPage('index1.html')">환영합니다</a></h2>
+  <div id="grid">
+    <ul id="nav">
+      <li><a href="#!introduction.html" onclick="fetchPage('introduction.html')">소개</a></li>
+      <li><a href="#!story.html" onclick="fetchPage('story.html')">글</a></li>
+      <li><a href="photo.html">사진</a></li>
+      <li><a href="#!IT.html" onclick="fetchPage('IT.html')">IT</a></li>
+    </ul>
+    <div id="article">
+      <article>
+
+      </article>
+    </div>
+  </div>
+  <script>
+    function fetchPage(name){
+      fetch(name).then(function(response) {
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML=text;
+        })
+      })
+    }
+    if(location.hash){
+      fetchPage(location.hash.substr(2));
+    } else {
+      fetchPage('index');
+    }
+  </script>
+</body>
+</html>
